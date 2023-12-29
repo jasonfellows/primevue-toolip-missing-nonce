@@ -1,5 +1,7 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <span v-tooltip="'Tooltip contents'">
+      Hover me
+    </span>
   </div>
 </template>

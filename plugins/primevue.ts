@@ -7,21 +7,8 @@ export function primeVuePlugin() {
     install: (app: App) => {
       app.use(PrimeVue, {
         csp: {
-          nonce: "testnonce",
+          nonce: useState("nonce").value || "testnonce",
         },
-        pt: {
-          button: () => ({
-            root: {
-              class: "font-medium py-2 rounded-full",
-            },
-          }),
-          multiselect: () => ({
-            token: {
-              class: "rounded-full",
-            },
-          }),
-        },
-        ripple: false,
       });
     },
   };
